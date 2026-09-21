@@ -158,8 +158,6 @@ export default function MemoryPath() {
       if (collectedKeys.length >= level.keys.length || (keyIndex !== -1 && collectedKeys.length + 1 >= level.keys.length)) {
         setStatus('won');
       } else {
-        setPlayer(level.start);
-        setCollectedKeys([]); // Optional: reset keys if they hit the door without them
         setBounceMsg('You need to collect all keys first!');
         setTimeout(() => setBounceMsg(''), 2000);
       }
